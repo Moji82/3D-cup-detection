@@ -1,11 +1,35 @@
-# XOR-Binary-Gravitational-Algorithm
+# MediaPipe for 3D cup location detection
 
-This is the code for the paper:
+This is the code for 3D cup location.
 
-Mojtaba Ahmadieh Khanesar, David Branson,
-'XOR Binary Gravitational Search Algorithm', IEEE conference on System, Man and Cybernetics, 2019, Bari, Italy
+Mojtaba Ahmadieh Khanesar
 
-Modified and improved version of the original version of BGSA by Esmat Rashedi et al.
-available at https://uk.mathworks.com/matlabcentral/fileexchange/47112-binary-gravitational-search-algorithm-bgsa-zip
+To use this file first you need to download and create the repository to get USB camera data through ROS. The following repository contains the directory to do so. 
+
+https://github.com/ros-drivers/usb_cam
+
+More information about this repository can be found at:
+
+https://wiki.ros.org/usb_cam
+
+The following steps are required:
+mkdir catkinws
+cd catkinws
+mkdir src
+cd src
+git clone https://github.com/ros-drivers/usb_cam
+cd ..
+catkin_make
+cd src
+mkdir scripts
+git clone https://github.com/Moji82/3D-cup-detection/
+chmod +x *.py
+cd ..
+cd ..
+roslaunch usb_cam usb_cam.launch
+rosrun usb_cam cup_detection_ros.py
+
+The USB camera you have attached to your PC should be able to detect your cup :)
+
 
 
