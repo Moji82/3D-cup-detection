@@ -1,8 +1,6 @@
 # MediaPipe for 3D cup location detection
 
-This is the code for 3D cup location.
-
-Mojtaba Ahmadieh Khanesar
+This is the code for locating the 3D position of a cup.
 
 To use this file first you need to download and create the repository to get USB camera data through ROS. The following repository contains the directory to do so. 
 
