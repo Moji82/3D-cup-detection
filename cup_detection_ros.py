@@ -61,7 +61,6 @@ class cup_detection_pub:
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     results = objectron.process(img)
 
-#    img.flags.writeable = True
     img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
     if results.detected_objects:
         for detected_object in results.detected_objects:
